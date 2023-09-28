@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+public  class MainActivity : AppCompatActivity()
+{
+
     private lateinit var BotonLogin: Button
     private lateinit var BotonRegistro: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
 
 
@@ -25,12 +29,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         BotonRegistro.setOnClickListener {
             // Abrir la actividad de registro
             val intent = Intent(this, ActivityRegistro::class.java)
             startActivity(intent)
             setContentView(R.layout.activity_registro)
         }
+
     }
+
 }
+
 
